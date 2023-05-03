@@ -1,3 +1,11 @@
+<!-- PHP -->
+<?php
+require 'include/db.php';
+$query = "SELECT * FROM tbl_home, tbl_about, tbl_menu, tbl_footer";
+$run = mysqli_query($db,$query);
+$user = mysqli_fetch_array($run);
+?>
+<!-- PHP -->
 <!DOCTYPE html>
 <html lang="en">
 

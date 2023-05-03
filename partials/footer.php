@@ -3,15 +3,14 @@
     <div class="container">
         <div class="row">
             <div class="wow fadeInUp col-md-4 col-sm-4" data-wow-delay="1.3s">
-                <h3>About the house</h3>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
-                    tincidunt ut laoreet. Dolore magna aliquam erat volutpat ipsum.</p>
+                <h3>About the <?= $user['title_home'] ?></h3>
+                <p><?= $user['desc'] ?></p>
             </div>
             <div class="wow fadeInUp col-md-4 col-sm-4" data-wow-delay="1.6s">
                 <h3>Contact Detail</h3>
-                <p>123 Delicious Street, San Francisco, CA 10110</p>
-                <p>010-020-0780</p>
-                <p>hello@company.com</p>
+                <p><?= $user['address'] ?></p>
+                <p><?= $user['phone'] ?></p>
+                <p><?= $user['email'] ?></p>
             </div>
             <div class="wow fadeInUp col-md-4 col-sm-4" data-wow-delay="1.9s">
                 <h3>Opening Hours</h3>
@@ -28,8 +27,8 @@
 <section id="copyright">
     <div class="container">
         <div class="row">
-            <div class="col-md-8 col-sm-8 col-xs-8">
-                <p>Copyright © 2016 Steak House Company - Designed by Tooplate</p>
+            <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+                <p>Copyright © 2016 Steak House Company - Designed by <a href="https://instagram.com/dwptrbayu" target="_blank">Dwi Putra Bayu</a></p>
             </div>
         </div>
     </div>

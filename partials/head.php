@@ -1,5 +1,5 @@
 <head>
-    <title>Steak House - Free HTML CSS Template</title>
+    <title><?= $user['title_home'] ?></title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
