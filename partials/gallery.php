@@ -22,8 +22,8 @@
                         <div class="iso-box-wrapper col4-iso-box">
                             <div class="iso-box breakfast pizza lunch col-md-4 col-sm-6">
                                 <div class="gallery-thumb">
-                                    <a href="images/gallery-img1.jpg" data-lightbox-gallery="food-gallery">
-                                        <img src="images/gallery-img1.jpg" class="fluid-img" alt="Gallery">
+                                    <a href="assets/images/gallery-img1.jpg" data-lightbox-gallery="food-gallery">
+                                        <img src="assets/images/gallery-img1.jpg" class="fluid-img" alt="Gallery">
                                         <div class="gallery-overlay">
                                             <div class="gallery-item">
                                                 <i class="fa fa-search"></i>
@@ -35,8 +35,8 @@
                             </div>
                             <div class="iso-box breakfast lunch dinner col-md-4 col-sm-6">
                                 <div class="gallery-thumb">
-                                    <a href="images/gallery-img2.jpg" data-lightbox-gallery="food-gallery">
-                                        <img src="images/gallery-img2.jpg" class="fluid-img" alt="Gallery">
+                                    <a href="assets/images/gallery-img2.jpg" data-lightbox-gallery="food-gallery">
+                                        <img src="assets/images/gallery-img2.jpg" class="fluid-img" alt="Gallery">
                                         <div class="gallery-overlay">
                                             <div class="gallery-item">
                                                 <i class="fa fa-search"></i>
@@ -48,8 +48,8 @@
                             </div>
                             <div class="iso-box dinner col-md-4 col-sm-6">
                                 <div class="gallery-thumb">
-                                    <a href="images/gallery-img3.jpg" data-lightbox-gallery="food-gallery">
-                                        <img src="images/gallery-img3.jpg" class="fluid-img" alt="Gallery">
+                                    <a href="assets/images/gallery-img3.jpg" data-lightbox-gallery="food-gallery">
+                                        <img src="assets/images/gallery-img3.jpg" class="fluid-img" alt="Gallery">
                                         <div class="gallery-overlay">
                                             <div class="gallery-item">
                                                 <i class="fa fa-search"></i>
@@ -61,8 +61,8 @@
                             </div>
                             <div class="iso-box breakfast col-md-4 col-sm-6">
                                 <div class="gallery-thumb">
-                                    <a href="images/gallery-img4.jpg" data-lightbox-gallery="food-gallery">
-                                        <img src="images/gallery-img4.jpg" class="fluid-img" alt="Gallery">
+                                    <a href="assets/images/gallery-img4.jpg" data-lightbox-gallery="food-gallery">
+                                        <img src="assets/images/gallery-img4.jpg" class="fluid-img" alt="Gallery">
                                         <div class="gallery-overlay">
                                             <div class="gallery-item">
                                                 <i class="fa fa-search"></i>
@@ -74,8 +74,8 @@
                             </div>
                             <div class="iso-box lunch col-md-4 col-sm-6">
                                 <div class="gallery-thumb">
-                                    <a href="images/gallery-img5.jpg" data-lightbox-gallery="food-gallery">
-                                        <img src="images/gallery-img5.jpg" class="fluid-img" alt="Gallery">
+                                    <a href="assets/images/gallery-img5.jpg" data-lightbox-gallery="food-gallery">
+                                        <img src="assets/images/gallery-img5.jpg" class="fluid-img" alt="Gallery">
                                         <div class="gallery-overlay">
                                             <div class="gallery-item">
                                                 <i class="fa fa-search"></i>
@@ -87,8 +87,8 @@
                             </div>
                             <div class="iso-box pizza lunch col-md-4 col-sm-6">
                                 <div class="gallery-thumb">
-                                    <a href="images/gallery-img6.jpg" data-lightbox-gallery="food-gallery">
-                                        <img src="images/gallery-img6.jpg" class="fluid-img" alt="Gallery">
+                                    <a href="assets/images/gallery-img6.jpg" data-lightbox-gallery="food-gallery">
+                                        <img src="assets/images/gallery-img6.jpg" class="fluid-img" alt="Gallery">
                                         <div class="gallery-overlay">
                                             <div class="gallery-item">
                                                 <i class="fa fa-search"></i>
