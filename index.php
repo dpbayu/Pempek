@@ -1,7 +1,7 @@
 <!-- PHP -->
 <?php
 require 'include/db.php';
-$query = "SELECT * FROM tbl_home, tbl_about, tbl_feature, tbl_team, tbl_footer";
+$query = "SELECT * FROM tbl_home";
 $run = mysqli_query($db,$query);
 $user = mysqli_fetch_array($run);
 ?>

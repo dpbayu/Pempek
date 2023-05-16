@@ -3,14 +3,14 @@
     <div class="container">
         <div class="row">
             <div class="wow fadeInUp col-md-4 col-sm-4" data-wow-delay="1.3s">
-                <h3>About the <?= $user['title_home'] ?></h3>
-                <p><?= $user['desc'] ?></p>
+                <h3>About the Title Home</h3>
+                <p>Description</p>
             </div>
             <div class="wow fadeInUp col-md-4 col-sm-4" data-wow-delay="1.6s">
                 <h3>Contact Detail</h3>
-                <p><?= $user['address'] ?></p>
-                <p><?= $user['phone'] ?></p>
-                <p><?= $user['email'] ?></p>
+                <p>Address</p>
+                <p>Phone</p>
+                <p>Email</p>
             </div>
             <div class="wow fadeInUp col-md-4 col-sm-4" data-wow-delay="1.9s">
                 <h3>Opening Hours</h3>
@@ -28,7 +28,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12 text-center">
-                <p>Copyright © 2016 Steak House Company - Designed by <a href="https://instagram.com/dwptrbayu" target="_blank">Dwi Putra Bayu</a></p>
+                <p>Copyright © 2016 Steak House Company - Designed by <a href="https://instagram.com/dwptrbayu"
+                        target="_blank">Dwi Putra Bayu</a></p>
             </div>
         </div>
     </div>

@@ -77,19 +77,21 @@ $(document).ready(function () {
 
   /* home slideshow section
   -----------------------------------------------*/
-  $(function () {
-    jQuery(document).ready(function () {
-      $('#home').backstretch([
-        "assets/images/home-bg-slideshow1.jpg",
-        "assets/images/home-bg-slideshow2.jpg",
-        "assets/images/home-bg-slideshow3.jpg",
-      ], {
-        duration: 2000,
-        fade: 750
-      });
-    });
-  })
-
+  var myIndex = 0;
+  carousel();
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {
+      myIndex = 1
+    }
+    x[myIndex - 1].style.display = "block";
+    setTimeout(carousel, 3000);
+  }
   /* Flexslider
   -----------------------------------------------*/
   $(window).load(function () {

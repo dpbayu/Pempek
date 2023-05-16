@@ -1,4 +1,9 @@
-<section id="home" class="parallax-section">
+<section id="home" class="parallax-section carousel slide carousel-fade" data-mdb-ride="carousel">
+    <div style="z-index: -1; position: absolute;">
+        <img class="mySlides w3-animate-fading" src="assets/images/home-bg-slideshow1.jpg" alt="">
+        <img class="mySlides w3-animate-fading" src="assets/images/home-bg-slideshow2.jpg" alt="">
+        <img class="mySlides w3-animate-fading" src="assets/images/home-bg-slideshow3.jpg" alt="">
+    </div>
     <div class="gradient-overlay"></div>
     <div class="container">
         <div class="row">
@@ -11,3 +16,4 @@
         </div>
     </div>
 </section>
+</div>

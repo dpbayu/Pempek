@@ -3,8 +3,8 @@
         <div class="row">
             <div class="col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10">
                 <div class="wow fadeInUp section-title" data-wow-delay="0.6s">
-                    <h2><?= $user['title_feature'] ?></h2>
-                    <h4><?= $user['subtitle_feature'] ?></h4>
+                    <h2>Title Feature</h2>
+                    <h4>Subtitle Feature</h4>
                 </div>
             </div>
             <div class="clearfix"></div>
@@ -13,7 +13,7 @@
                     <div class="feature-icon">
                         <span><img src="assets/images/icon/fork.png" alt="icon" width="50" style="filter: invert(1);"></span>
                     </div>
-                    <p><?= $user['desc_feature'] ?></p>
+                    <p>Description Feature</p>
                 </div>
             </div>
         </div>
