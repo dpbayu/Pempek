@@ -3,8 +3,8 @@
         <div class="row">
             <div class="col-md-offset-2 col-md-8 col-sm-offset-1 col-sm-10">
                 <div class="wow fadeInUp section-title" data-wow-delay="0.3s">
-                    <h2>Title</h2>
-                    <h4>Subtitle</h4>
+                    <h2><?= $user['title_about'] ?></h2>
+                    <h4><?= $user['subtitle_about'] ?></h4>
                 </div>
             </div>
             <div class="clearfix"></div>

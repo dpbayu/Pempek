@@ -1,7 +1,7 @@
 <!-- PHP -->
 <?php
 require 'include/db.php';
-$query = "SELECT * FROM tbl_home";
+$query = "SELECT * FROM tbl_home, tbl_feature, tbl_about, tbl_menu, tbl_team, tbl_contact";
 $run = mysqli_query($db,$query);
 $user = mysqli_fetch_array($run);
 ?>
@@ -32,7 +32,6 @@ $user = mysqli_fetch_array($run);
   <?php require 'partials/about.php' ?>
   <!-- About End -->
   <!-- Video Start -->
-  <?php require 'partials/video.php' ?>
   <!-- Video End -->
   <!-- Menu Start -->
   <?php require 'partials/menu.php' ?>
@@ -41,7 +40,6 @@ $user = mysqli_fetch_array($run);
   <?php require 'partials/team.php' ?>
   <!-- Team End -->
   <!-- Gallery Start -->
-  <?php require 'partials/gallery.php' ?>
   <!-- Gallery End -->
   <!-- Contact Start -->
   <?php require 'partials/contact.php' ?>
