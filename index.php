@@ -31,16 +31,12 @@ $user = mysqli_fetch_array($run);
   <!-- About Start -->
   <?php require 'partials/about.php' ?>
   <!-- About End -->
-  <!-- Video Start -->
-  <!-- Video End -->
   <!-- Menu Start -->
   <?php require 'partials/menu.php' ?>
   <!-- Menu End -->
   <!-- Team Start -->
   <?php require 'partials/team.php' ?>
   <!-- Team End -->
-  <!-- Gallery Start -->
-  <!-- Gallery End -->
   <!-- Contact Start -->
   <?php require 'partials/contact.php' ?>
   <!-- Contect End -->

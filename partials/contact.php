@@ -11,8 +11,8 @@
                     <form id="contact-form" method="post" action="#">
                         <input name="name" type="text" class="form-control" placeholder="Your Name" required>
                         <input name="email" type="email" class="form-control" placeholder="Your Email" required>
-                        <textarea name="message" class="form-control" placeholder="Message" rows="5"
-                            required></textarea>
+                        <textarea name="message" class="form-control" placeholder="Message" rows="5" required
+                            style="resize: none;"></textarea>
                         <input type="submit" class="form-control submit" value="SEND MESSAGE">
                     </form>
                 </div>

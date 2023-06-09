@@ -15,7 +15,6 @@
                 <li><a href="#about" class="smoothScroll">About</a></li>
                 <li><a href="#menu" class="smoothScroll">Menu</a></li>
                 <li><a href="#team" class="smoothScroll">Team</a></li>
-                <li><a href="#gallery" class="smoothScroll">Gallery</a></li>
                 <li><a href="#contact" class="smoothScroll">Contact</a></li>
             </ul>
         </div>
