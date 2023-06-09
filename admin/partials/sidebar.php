@@ -32,10 +32,10 @@
             <span>Home</span>
         </a>
     </li>
-    <li class="nav-item <?php if ($page == 'a'){ echo 'active'; } ?>">
-        <a class="nav-link" href="tables.html">
+    <li class="nav-item <?php if ($page == 'about'){ echo 'active'; } ?>">
+        <a class="nav-link" href="about.php">
             <i class="fas fa-fw fa-table"></i>
-            <span>Tables</span>
+            <span>About</span>
         </a>
     </li>
     <li class="nav-item <?php if ($page == 'a'){ echo 'active'; } ?>">

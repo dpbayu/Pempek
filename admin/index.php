@@ -33,6 +33,7 @@ $home = mysqli_fetch_array($run);
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
                     </div>
+                    <!-- Page Heading End -->
                     <?php
                         if (isset($_GET['success'])) {
                             $msg = $_GET['success'];
@@ -51,7 +52,6 @@ $home = mysqli_fetch_array($run);
                             </div>';
                         }
                     ?>
-                    <!-- Page Heading End -->
                     <form class="pb-5" action="function.php" method="POST">
                         <div class="card-body">
                             <div class="form-group">
