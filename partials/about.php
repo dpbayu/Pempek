@@ -26,7 +26,7 @@
                 <!-- Flexslider End -->
             </div>
             <div class="wow fadeInUp col-md-4 col-sm-12" data-wow-delay="0.9s">
-                <p>Description About</p>
+                <p><?= $user['desc_about'] ?></p>
             </div>
         </div>
     </div>
