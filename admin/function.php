@@ -54,4 +54,34 @@ if (isset($_POST['updateAbout'])) {
     }
 }
 // Update About
+
+// Update Feature Start
+if (isset($_POST['updateFeature'])) {
+    $title_feature = mysqli_real_escape_string($db,$_POST['title_feature']);
+    $subtitle_feature = mysqli_real_escape_string($db,$_POST['subtitle_feature']);
+    $query = "UPDATE tbl_home SET title_feature = '$title_feature', subtitle_feature = '$subtitle_feature' WHERE id = 1";
+    $run = mysqli_query($db,$query);
+    if ($run) {
+        echo "<script>document.location.href = 'feature.php?success=Succesfully updated!';</script>";
+    }
+} else if (isset($_POST['addFeature'])) {
+    $desc_feature = trim(mysqli_real_escape_string($db, $_POST['desc_feature']));
+    $img_feature = $_FILES['img_feature']['name'];
+    move_uploaded_file($_FILES['img_feature']['tmp_name'],"../assets/images/icon/$img_feature");
+    mysqli_query($db, "INSERT INTO tbl_feature (id, desc_feature, img_feature) VALUES ('', '$desc_feature', '$img_feature')");
+        echo "<script>window.location='feature.php?success=Data successfuly added!';</script>";
+} else if (isset($_POST['editFeature'])) {
+    $id = $_POST['id'];
+    $desc_feature = trim(mysqli_real_escape_string($db, $_POST['desc_feature']));
+    $img_feature = $_FILES['img_feature']['name'];
+    if ($img_feature != '') {
+        move_uploaded_file($_FILES['img_feature']['tmp_name'],"../assets/images/icon/$img_feature");
+        mysqli_query($db, "UPDATE tbl_feature SET desc_feature = '$desc_feature', img_feature = '$img_feature' WHERE id = '$id'");
+        echo "<script>window.location='feature.php?success=Data successfuly updated!';</script>";
+    } else {
+        mysqli_query($db, "UPDATE tbl_feature SET desc_feature = '$desc_feature' WHERE id = '$id'");
+        echo "<script>window.location='feature.php?success=Data successfuly updated!';</script>";
+    }
+}
+// Update Feature End
 ?>

@@ -1,10 +1,10 @@
 <!-- PHP -->
 <?php
 require '../include/db.php';
-$page = 'about';
-$query = "SELECT * FROM tbl_about";
+$page = 'home';
+$query = "SELECT * FROM tbl_home";
 $run = mysqli_query($db,$query);
-$about = mysqli_fetch_array($run);
+$home = mysqli_fetch_array($run);
 ?>
 <!-- PHP -->
 <!DOCTYPE html>
@@ -31,7 +31,7 @@ $about = mysqli_fetch_array($run);
                 <div class="container-fluid">
                     <!-- Page Heading Start -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">About Page</h1>
+                        <h1 class="h3 mb-0 text-gray-800">Home Page</h1>
                     </div>
                     <!-- Page Heading End -->
                     <?php
@@ -52,42 +52,19 @@ $about = mysqli_fetch_array($run);
                             </div>';
                         }
                     ?>
-                    <form class="pb-5" action="function.php" method="POST" enctype="multipart/form-data">
+                    <form class="pb-5" action="function.php" method="POST">
                         <div class="card-body">
                             <div class="form-group">
                                 <label for="title">Title</label>
-                                <input type="text" class="form-control" id="title" name="title_about"
-                                    placeholder="Enter title" value="<?= $about['title_about'] ?>">
+                                <input type="text" class="form-control" id="title" name="title_home"
+                                    placeholder="Enter title" value="<?= $home['title_home'] ?>">
                             </div>
                             <div class="form-group">
                                 <label for="name">Subtitle</label>
-                                <input type="text" class="form-control" id="name" name="subtitle_about"
-                                    placeholder="Enter subtitle" value="<?= $about['subtitle_about'] ?>">
+                                <input type="text" class="form-control" id="name" name="subtitle_home"
+                                    placeholder="Enter subtitle" value="<?= $home['subtitle_home'] ?>">
                             </div>
-                            <div class="d-flex w-100 justify-content-between">
-                                <div class="form-group">
-                                    <div class="d-flex flex-column">
-                                        <label for="image">Image About 1</label>
-                                        <img class="mb-3" src="../assets/images/<?= $about['img_about1'] ?>" width="400">
-                                        <input type="file" class="form-control" name="img_about1">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="d-flex flex-column">
-                                        <label for="image">Image About 2</label>
-                                        <img class="mb-3" src="../assets/images/<?= $about['img_about2'] ?>" width="400">
-                                        <input type="file" class="form-control" name="img_about2">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="d-flex flex-column">
-                                        <label for="image">Image About 3</label>
-                                        <img class="mb-3" src="../assets/images/<?= $about['img_about3'] ?>" width="400">
-                                        <input type="file" class="form-control" name="img_about3">
-                                    </div>
-                                </div>
-                            </div>
-                            <button type="submit" name="updateAbout" class="btn btn-primary">Update About</button>
+                            <button type="submit" name="updateHome" class="btn btn-primary">Update Home</button>
                         </div>
                     </form>
                 </div>

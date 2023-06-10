@@ -11,7 +11,7 @@
     <hr class="sidebar-divider my-0">
     <!-- Divide End -->
     <!-- Nav Item - Dashboard -->
-    <li class="nav-item <?php if ($page == 'homea'){ echo 'active'; } ?>">
+    <li class="nav-item <?php if ($page == 'dashboard'){ echo 'active'; } ?>">
         <a class="nav-link" href="index.php">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span>
@@ -38,10 +38,10 @@
             <span>About</span>
         </a>
     </li>
-    <li class="nav-item <?php if ($page == 'a'){ echo 'active'; } ?>">
-        <a class="nav-link" href="tables.html">
+    <li class="nav-item <?php if ($page == 'feature'){ echo 'active'; } ?>">
+        <a class="nav-link" href="feature.php">
             <i class="fas fa-fw fa-table"></i>
-            <span>Tables</span>
+            <span>Feature</span>
         </a>
     </li>
     <!-- Menu End -->
