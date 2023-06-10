@@ -56,6 +56,12 @@
             <span>Team</span>
         </a>
     </li>
+    <li class="nav-item <?php if ($page == 'contact'){ echo 'active'; } ?>">
+        <a class="nav-link" href="contact.php">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Contact</span>
+        </a>
+    </li>
     <!-- Menu End -->
     <!-- Divider Start -->
     <hr class="sidebar-divider">

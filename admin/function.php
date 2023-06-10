@@ -155,4 +155,17 @@ if (isset($_POST['updateTeam'])) {
     }
 }
 // Update Team End
+
+// Update Home
+if (isset($_POST['updateContact'])) {
+    $address_contact = mysqli_real_escape_string($db,$_POST['address_contact']);
+    $phone_contact = mysqli_real_escape_string($db,$_POST['phone_contact']);
+    $email_contact = mysqli_real_escape_string($db,$_POST['email_contact']);
+    $query = "UPDATE tbl_contact SET address_contact = '$address_contact', phone_contact = '$phone_contact', email_contact = '$email_contact' WHERE id = 1";
+    $run = mysqli_query($db,$query);
+    if ($run) {
+        echo "<script>document.location.href = 'contact.php?success=Succesfully updated!';</script>";
+    }
+}
+// Update Home
 ?>
