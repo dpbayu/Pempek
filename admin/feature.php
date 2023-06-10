@@ -149,7 +149,7 @@ $feature = mysqli_fetch_array($run);
                     <form action="function.php" method="POST" enctype="multipart/form-data">
                         <div class="card-body">
                             <div class="form-group">
-                                <div class="d-flex flex-column w-25">
+                                <div class="d-flex flex-column w-50">
                                     <div class="form-group">
                                         <div class="d-flex flex-column">
                                             <label for="image">Icon</label>

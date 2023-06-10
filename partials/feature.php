@@ -9,7 +9,7 @@
             </div>
             <div class="clearfix"></div>
             <?php 
-                $query_feature = "SELECT * FROM tbl_feature ORDER BY id DESC";
+                $query_feature = "SELECT * FROM tbl_feature";
                 $run_feature = mysqli_query($db,$query_feature);
                 while ($feature = mysqli_fetch_array($run_feature)) {
             ?>
