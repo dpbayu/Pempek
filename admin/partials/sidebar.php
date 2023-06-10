@@ -44,6 +44,12 @@
             <span>Feature</span>
         </a>
     </li>
+    <li class="nav-item <?php if ($page == 'menu'){ echo 'active'; } ?>">
+        <a class="nav-link" href="menu.php">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Menu</span>
+        </a>
+    </li>
     <!-- Menu End -->
     <!-- Divider Start -->
     <hr class="sidebar-divider">

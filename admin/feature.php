@@ -90,7 +90,7 @@ $feature = mysqli_fetch_array($run);
                                             Edit
                                         </button>
                                         <a onclick="return confirm('Are you sure delete this data ?')"
-                                            href="deletePortfolio.php?id=<?= $feature['id'] ?>" class="btn btn-danger">
+                                            href="deleteFeature.php?id=<?= $feature['id'] ?>" class="btn btn-danger">
                                             Delete
                                         </a>
                                     </div>
@@ -145,7 +145,7 @@ $feature = mysqli_fetch_array($run);
                             </div>
                         </div>
                     </div>
-                    <!-- Add Icon Start -->
+                    <!-- Add Feature Start -->
                     <form action="function.php" method="POST" enctype="multipart/form-data">
                         <div class="card-body">
                             <div class="form-group">
@@ -166,7 +166,7 @@ $feature = mysqli_fetch_array($run);
                             <button type="submit" name="addFeature" class="btn btn-primary">Add Feature</button>
                         </div>
                     </form>
-                    <!-- Add Icon End -->
+                    <!-- Add Feature End -->
                 </div>
                 <!-- Container End -->
             </div>

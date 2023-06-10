@@ -64,25 +64,30 @@ $about = mysqli_fetch_array($run);
                                 <input type="text" class="form-control" id="name" name="subtitle_about"
                                     placeholder="Enter subtitle" value="<?= $about['subtitle_about'] ?>">
                             </div>
+                            <div class="form-group">
+                                <label for="name">Description</label>
+                                <input type="text" class="form-control" id="name" name="desc_about"
+                                    placeholder="Enter subtitle" value="<?= $about['desc_about'] ?>">
+                            </div>
                             <div class="d-flex w-100 justify-content-between">
                                 <div class="form-group">
                                     <div class="d-flex flex-column">
                                         <label for="image">Image About 1</label>
-                                        <img class="mb-3" src="../assets/images/<?= $about['img_about1'] ?>" width="400">
+                                        <img class="mb-3" src="../assets/images/about/<?= $about['img_about1'] ?>" width="400">
                                         <input type="file" class="form-control" name="img_about1">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="d-flex flex-column">
                                         <label for="image">Image About 2</label>
-                                        <img class="mb-3" src="../assets/images/<?= $about['img_about2'] ?>" width="400">
+                                        <img class="mb-3" src="../assets/images/about/<?= $about['img_about2'] ?>" width="400">
                                         <input type="file" class="form-control" name="img_about2">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="d-flex flex-column">
                                         <label for="image">Image About 3</label>
-                                        <img class="mb-3" src="../assets/images/<?= $about['img_about3'] ?>" width="400">
+                                        <img class="mb-3" src="../assets/images/about/<?= $about['img_about3'] ?>" width="400">
                                         <input type="file" class="form-control" name="img_about3">
                                     </div>
                                 </div>

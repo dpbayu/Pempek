@@ -17,6 +17,7 @@ if (isset($_POST['updateHome'])) {
 if (isset($_POST['updateAbout'])) {
     $title_about = mysqli_real_escape_string($db,$_POST['title_about']);
     $subtitle_about = mysqli_real_escape_string($db,$_POST['subtitle_about']);
+    $desc_about = mysqli_real_escape_string($db,$_POST['desc_about']);
     // Img 1
     $img_about1 = $_FILES['img_about1']['name'];
     $imgtemp = $_FILES['img_about1']['tmp_name'];
@@ -26,7 +27,7 @@ if (isset($_POST['updateAbout'])) {
         $fetch_home = mysqli_fetch_array($query_home);
         $img_about1 = $fetch_home['img_about1'];
     }
-    move_uploaded_file($imgtemp,"../images/$img_about1");
+    move_uploaded_file($imgtemp,"../assets/images/about/$img_about1");
     // Img 2
     $img_about2 = $_FILES['img_about2']['name'];
     $imgtemp = $_FILES['img_about2']['tmp_name'];
@@ -36,7 +37,7 @@ if (isset($_POST['updateAbout'])) {
         $fetch_resume = mysqli_fetch_array($query_resume);
         $img_about2 = $fetch_resume['img_about2'];
     }
-    move_uploaded_file($imgtemp,"../images/$img_about2");
+    move_uploaded_file($imgtemp,"../assets/images/about/$img_about2");
     // Img 3
     $img_about3 = $_FILES['img_about3']['name'];
     $imgtemp = $_FILES['img_about3']['tmp_name'];
@@ -46,8 +47,8 @@ if (isset($_POST['updateAbout'])) {
         $fetch_resume = mysqli_fetch_array($query_resume);
         $img_about3 = $fetch_resume['img_about3'];
     }
-    move_uploaded_file($imgtemp,"../images/$img_about3");
-    $query = "UPDATE tbl_about SET title_about = '$title_about', subtitle_about = '$subtitle_about', img_about1 = '$img_about1', img_about2 = '$img_about2', img_about3 = '$img_about3' WHERE id = 1";
+    move_uploaded_file($imgtemp,"../assets/images/about/$img_about3");
+    $query = "UPDATE tbl_about SET title_about = '$title_about', subtitle_about = '$subtitle_about', desc_about = '$desc_about', img_about1 = '$img_about1', img_about2 = '$img_about2', img_about3 = '$img_about3' WHERE id = 1";
     $run = mysqli_query($db,$query);
     if ($run) {
         echo "<script>document.location.href = 'about.php?success=Succesfully updated!';</script>";
@@ -84,4 +85,38 @@ if (isset($_POST['updateFeature'])) {
     }
 }
 // Update Feature End
+
+// Update Menu Start
+if (isset($_POST['updateMenu'])) {
+    $title_menu = mysqli_real_escape_string($db,$_POST['title_menu']);
+    $subtitle_menu = mysqli_real_escape_string($db,$_POST['subtitle_menu']);
+    $query = "UPDATE tbl_home SET title_menu = '$title_menu', subtitle_menu = '$subtitle_menu' WHERE id = 1";
+    $run = mysqli_query($db,$query);
+    if ($run) {
+        echo "<script>document.location.href = 'menu.php?success=Succesfully updated!';</script>";
+    }
+} else if (isset($_POST['addMenu'])) {
+    $name_menu = trim(mysqli_real_escape_string($db, $_POST['name_menu']));
+    $price_menu = trim(mysqli_real_escape_string($db, $_POST['price_menu']));
+    $desc_menu = trim(mysqli_real_escape_string($db, $_POST['desc_menu']));
+    $img_menu = $_FILES['img_menu']['name'];
+    move_uploaded_file($_FILES['img_menu']['tmp_name'],"../assets/images/menu/$img_menu");
+    mysqli_query($db, "INSERT INTO tbl_menu (id, name_menu, desc_menu, price_menu, img_menu) VALUES ('', '$name_menu', '$desc_menu', '$price_menu', '$img_menu')");
+        echo "<script>window.location='menu.php?success=Data successfuly added!';</script>";
+} else if (isset($_POST['editMenu'])) {
+    $id = $_POST['id'];
+    $name_menu = trim(mysqli_real_escape_string($db, $_POST['name_menu']));
+    $desc_menu = trim(mysqli_real_escape_string($db, $_POST['desc_menu']));
+    $price_menu = trim(mysqli_real_escape_string($db, $_POST['price_menu']));
+    $img_menu = $_FILES['img_menu']['name'];
+    if ($img_menu != '') {
+        move_uploaded_file($_FILES['img_menu']['tmp_name'],"../assets/images/menu/$img_menu");
+        mysqli_query($db, "UPDATE tbl_menu SET name_menu = '$name_menu', desc_menu = '$desc_menu', price_menu = '$price_menu', img_menu = '$img_menu' WHERE id = '$id'");
+        echo "<script>window.location='menu.php?success=Data successfuly updated!';</script>";
+    } else {
+        mysqli_query($db, "UPDATE tbl_menu SET name_menu = '$name_menu', desc_menu = '$desc_menu', price_menu = '$price_menu' WHERE id = '$id'");
+        echo "<script>window.location='menu.php?success=Data successfuly updated!';</script>";
+    }
+}
+// Update Menu End
 ?>

@@ -13,13 +13,13 @@
                 <div class="flexslider">
                     <ul class="slides">
                         <li>
-                            <img src="assets/images/<?= $user['img_about1'] ?>" alt="Flexslider">
+                            <img src="assets/images/about/<?= $user['img_about1'] ?>" alt="Flexslider">
                         </li>
                         <li>
-                            <img src="assets/images/<?= $user['img_about2'] ?>" alt="Flexslider">
+                            <img src="assets/images/about/<?= $user['img_about2'] ?>" alt="Flexslider">
                         </li>
                         <li>
-                            <img src="assets/images/<?= $user['img_about3'] ?>" alt="Flexslider">
+                            <img src="assets/images/about/<?= $user['img_about3'] ?>" alt="Flexslider">
                         </li>
                     </ul>
                 </div>
