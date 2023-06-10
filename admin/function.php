@@ -119,4 +119,38 @@ if (isset($_POST['updateMenu'])) {
     }
 }
 // Update Menu End
+
+// Update Team Start
+if (isset($_POST['updateTeam'])) {
+    $title_team = mysqli_real_escape_string($db,$_POST['title_team']);
+    $subtitle_team = mysqli_real_escape_string($db,$_POST['subtitle_team']);
+    $query = "UPDATE tbl_home SET title_team = '$title_team', subtitle_team = '$subtitle_team' WHERE id = 1";
+    $run = mysqli_query($db,$query);
+    if ($run) {
+        echo "<script>document.location.href = 'team.php?success=Succesfully updated!';</script>";
+    }
+} else if (isset($_POST['addTeam'])) {
+    $name_team = trim(mysqli_real_escape_string($db, $_POST['name_team']));
+    $job_team = trim(mysqli_real_escape_string($db, $_POST['job_team']));
+    $phone_team = trim(mysqli_real_escape_string($db, $_POST['phone_team']));
+    $img_team = $_FILES['img_team']['name'];
+    move_uploaded_file($_FILES['img_team']['tmp_name'],"../assets/images/team/$img_team");
+    mysqli_query($db, "INSERT INTO tbl_team (id, name_team, phone_team, job_team, img_team) VALUES ('', '$name_team', '$phone_team', '$job_team', '$img_team')");
+        echo "<script>window.location='team.php?success=Data successfuly added!';</script>";
+} else if (isset($_POST['editTeam'])) {
+    $id = $_POST['id'];
+    $name_team = trim(mysqli_real_escape_string($db, $_POST['name_team']));
+    $phone_team = trim(mysqli_real_escape_string($db, $_POST['phone_team']));
+    $job_team = trim(mysqli_real_escape_string($db, $_POST['job_team']));
+    $img_team = $_FILES['img_team']['name'];
+    if ($img_team != '') {
+        move_uploaded_file($_FILES['img_team']['tmp_name'],"../assets/images/team/$img_team");
+        mysqli_query($db, "UPDATE tbl_team SET name_team = '$name_team', phone_team = '$phone_team', job_team = '$job_team', img_team = '$img_team' WHERE id = '$id'");
+        echo "<script>window.location='team.php?success=Data successfuly updated!';</script>";
+    } else {
+        mysqli_query($db, "UPDATE tbl_team SET name_team = '$name_team', phone_team = '$phone_team', job_team = '$job_team' WHERE id = '$id'");
+        echo "<script>window.location='team.php?success=Data successfuly updated!';</script>";
+    }
+}
+// Update Team End
 ?>

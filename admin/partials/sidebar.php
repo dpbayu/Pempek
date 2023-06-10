@@ -50,6 +50,12 @@
             <span>Menu</span>
         </a>
     </li>
+    <li class="nav-item <?php if ($page == 'team'){ echo 'active'; } ?>">
+        <a class="nav-link" href="team.php">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Team</span>
+        </a>
+    </li>
     <!-- Menu End -->
     <!-- Divider Start -->
     <hr class="sidebar-divider">
