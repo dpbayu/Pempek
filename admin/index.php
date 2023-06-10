@@ -1,5 +1,10 @@
 <!-- PHP -->
 <?php
+session_start();
+if (!isset($_SESSION["login"])) {
+    header("Location: ../login.php");
+    exit;
+}
 require '../include/db.php';
 $page = 'dashboard';
 $query = "SELECT * FROM tbl_home";
