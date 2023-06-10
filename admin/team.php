@@ -64,6 +64,16 @@ $team = mysqli_fetch_array($run);
                                 <input type="text" class="form-control" id="name" name="subtitle_team"
                                     placeholder="Enter subtitle" value="<?= $team['subtitle_team'] ?>">
                             </div>
+                            <div class="form-group">
+                                <label for="name">Taste</label>
+                                <input type="text" class="form-control" id="name" name="desc_taste"
+                                    placeholder="Enter taste" value="<?= $team['desc_taste'] ?>">
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Service</label>
+                                <input type="text" class="form-control" id="name" name="desc_service"
+                                    placeholder="Enter service" value="<?= $team['desc_service'] ?>">
+                            </div>
                             <button type="submit" name="updateTeam" class="btn btn-primary">Update Team</button>
                             <!-- List Team Start -->
                             <table class="table table-bordered table-hover my-3" id="team">

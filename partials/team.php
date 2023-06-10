@@ -10,20 +10,29 @@
             <div class="clearfix"></div>
             <div class="row">
                 <div class="col-md-9">
+                    <?php 
+                        $query_ = "SELECT * FROM tbl_team";
+                        $run_team = mysqli_query($db,$query_);
+                        while ($team = mysqli_fetch_array($run_team)) {
+                    ?>
                     <!-- Content Team Start -->
                     <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.4s">
-                        <div class="team-thumb">
-                            <img src="assets/images/chef1.jpg" class="img-responsive" alt="Team">
+                        <div class="team-thumb mb-5">
+                            <img src="assets/images/team/<?= $team['img_team'] ?>" class="img-responsive" alt="Team">
                             <div class="team-des">
-                                <h3><?= $user['name_team'] ?></h3>
-                                <h4><?= $user['job_team'] ?></h4>
+                                <h3><?= $team['name_team'] ?></h3>
+                                <h4><?= $team['job_team'] ?></h4>
                                 <ul class="social-icon">
-                                    <li><a href="whatsapp://send?text=Hello&phone=+62<?= $user['phone_team'] ?>" class="fa fa-whatsapp"></a></li>
+                                    <li><a href="whatsapp://send?text=Hello&phone=+62<?= $team['phone_team'] ?>"
+                                            class="fa fa-whatsapp"></a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <!-- Content Team End -->
+                    <?php 
+                    }
+                    ?>
                 </div>
                 <div class="col-md-3 col-sm-6 wow fadeInUp" data-wow-delay="1.1s">
                     <div class="join-team">

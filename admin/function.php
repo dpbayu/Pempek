@@ -124,7 +124,9 @@ if (isset($_POST['updateMenu'])) {
 if (isset($_POST['updateTeam'])) {
     $title_team = mysqli_real_escape_string($db,$_POST['title_team']);
     $subtitle_team = mysqli_real_escape_string($db,$_POST['subtitle_team']);
-    $query = "UPDATE tbl_home SET title_team = '$title_team', subtitle_team = '$subtitle_team' WHERE id = 1";
+    $desc_taste = mysqli_real_escape_string($db,$_POST['desc_taste']);
+    $desc_service = mysqli_real_escape_string($db,$_POST['desc_service']);
+    $query = "UPDATE tbl_home SET title_team = '$title_team', subtitle_team = '$subtitle_team', desc_taste = '$desc_taste', desc_service = '$desc_service' WHERE id = 1";
     $run = mysqli_query($db,$query);
     if ($run) {
         echo "<script>document.location.href = 'team.php?success=Succesfully updated!';</script>";
